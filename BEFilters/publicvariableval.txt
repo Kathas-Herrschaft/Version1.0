@@ -1,0 +1,2 @@
+5 "life_fnc_netSetVar"
+1 ""
