@@ -90,7 +90,7 @@ life_action_in_use = false;
 life_thirst = 100;
 life_hunger = 100;
 life_battery = 50;
-__CONST__(life_paycheck_period,10); //Five minutes
+__CONST__(life_paycheck_period,10); //Ten minutes
 life_cash = 0;
 __CONST__(life_impound_car,2500);
 __CONST__(life_impound_boat,1000);
@@ -109,17 +109,52 @@ switch (playerSide) do
 	case west:
 	{
 		life_atmcash = 10000; //Starting Bank Money
-		life_paycheck = 2000; //Paycheck Amount
-	};
+		if(__GETC__(life_coplevel) == 1){
+			life_paycheck = 2000;
+		} else if(__GETC__(life_coplevel) == 2){
+			life_paycheck = 3250;
+		} else if(__GETC__(life_coplevel) == 3){
+			life_paycheck = 4500;
+		} else if(__GETC__(life_coplevel) == 4){
+			life_paycheck = 5750;
+		} else if(__GETC__(life_coplevel) == 5){
+			life_paycheck = 7000;
+		} else if(__GETC__(life_coplevel) == 6){
+			life_paycheck = 8250;
+		} else if(__GETC__(life_coplevel) == 7){
+			life_paycheck = 9500;
+		} else if(__GETC__(life_coplevel) == 8){
+			life_paycheck = 10750;
+		} else if(__GETC__(life_coplevel) == 9){
+			life_paycheck = 11000;
+		}
+		};
 	case civilian:
 	{
 		life_atmcash = 10000; //Starting Bank Money
-		life_paycheck = 850; //Paycheck Amount
+		life_paycheck = 1700; //Paycheck Amount
 	};
 
 	case independent: {
 		life_atmcash = 10000;
-		life_paycheck = 1750;
+		if(__GETC__(life_medlevel) == 1){
+			life_paycheck = 2000;
+		} else if(__GETC__(life_medlevel) == 2){
+			life_paycheck = 3250;
+		} else if(__GETC__(life_medlevel) == 3){
+			life_paycheck = 4500;
+		} else if(__GETC__(life_medlevel) == 4){
+			life_paycheck = 5750;
+		} else if(__GETC__(life_medlevel) == 5){
+			life_paycheck = 7000;
+		} else if(__GETC__(life_medlevel) == 6){
+			life_paycheck = 8250;
+		} else if(__GETC__(life_medlevel) == 7){
+			life_paycheck = 9500;
+		} else if(__GETC__(life_medlevel) == 8){
+			life_paycheck = 10750;
+		}
+		};
 	};
 };
 
@@ -219,6 +254,7 @@ life_licenses =
 	["license_cop_air","cop"],
 	["license_cop_swat","cop"],
 	["license_cop_cg","cop"],
+	["license_cop_sek","cop"],
 	["license_civ_driver","civ"],
 	["license_civ_air","civ"],
 	["license_civ_heroin","civ"],
