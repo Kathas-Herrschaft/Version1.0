@@ -24,6 +24,7 @@ switch (_mode) do
 			case "oil": {_var = "license_civ_oil"}; //Oil processing license cost
 			case "cair": {_var = "license_cop_air"}; //Cop Pilot License cost
 			case "swat": {_var = "license_cop_swat"}; //Swat License cost
+			case "sek": {_var = "license_cop_sek"}; //SEK License cost
 			case "cg": {_var = "license_cop_cg"}; //Coast guard license cost
 			case "heroin": {_var = "license_civ_heroin"}; //Heroin processing license cost
 			case "marijuana": {_var = "license_civ_marijuana"}; //Marijuana processing license cost
