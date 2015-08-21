@@ -51,7 +51,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != west): {"You are not a cop!"};
+			case (playerSide != west): {"Du bist kein Polizist!"};
 			case (__GETC__(life_coplevel) < 1): {"Du kannst erst als Polizistmeister hier Zugreifen !"};
 			default
 			{
@@ -666,7 +666,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian): {"You are not a cop!"};
+			case (playerSide != civilian): {"Du bist kein Zivilist!"};
 			case (!license_civ_rebel): {"Du besitz keine Rebellen Lizenz!"};
 			default
 			{
@@ -709,7 +709,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (playerSide != civilian): {"You are not a cop!"};
+			case (playerSide != civilian): {"Du bist kein Zivilist!"};
 			case (!license_civ_gun): {"Du hast keinen Waffenschein!"};
 			default
 			{
@@ -734,7 +734,7 @@ switch(_shop) do
 	{
 		switch(true) do
 		{
-			case (__GETC__(life_donator) == 0): {"You are not a donator!"};
+			case (__GETC__(life_donator) == 0): {"Du bist kein Unterstützer!"};
 			case (__GETC__(life_donator) == 1):
 			{
 				["STS Donator Shop Rang 1",
